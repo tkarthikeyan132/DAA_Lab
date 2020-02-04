@@ -1,4 +1,4 @@
-#include<iostream>
+#include<iostream> // gcd using brute force method ( recursive implementation )
 using namespace std;
 int gcd(int,int,int);
 int main()
