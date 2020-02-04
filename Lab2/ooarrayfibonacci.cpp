@@ -33,6 +33,13 @@ int mark(int arr[])
     while(arr[fibs[w]]!=-1)
     {
         w++;
+        if(w==21)
+        {
+            if(arr[9999]==-1)
+                return -2;
+            else
+                w++;
+        }
         if(w==22) // fib[21] is the first fibonacci number exceeding 10000
             return -1;
     }
