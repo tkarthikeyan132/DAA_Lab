@@ -38,7 +38,6 @@ int binminone(int arr[],int beg,int end)
 }
 int mark(int arr[])
 {
-    int y=0;
     if(arr[0]==-1)
         return 0;
     else
