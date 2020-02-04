@@ -1,4 +1,4 @@
-#include<iostream>
+#include<iostream> // gcd using euclids algorithm ( iterative implementation )
 using namespace std;
 int gcd(int,int);
 int main()
