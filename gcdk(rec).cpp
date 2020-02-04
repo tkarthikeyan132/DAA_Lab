@@ -1,4 +1,4 @@
-#include<iostream>
+#include<iostream> // gcd for k numbers ( recursive implementation )
 using namespace std;
 int gcd(int,int);
 int gcda(int a[],int);
