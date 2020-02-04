@@ -1,4 +1,4 @@
-#include<iostream>
+#include<iostream> //gcd using steins algorithm(recursive implementation)
 #include<cmath>
 using namespace std;
 int gcd(int,int);
