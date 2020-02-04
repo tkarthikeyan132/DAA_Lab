@@ -1,0 +1,6 @@
+gcd(a,0)=gcd(0,a)=a
+gcd(0,0)=not defined
+gcd(a,b)=gcd(-a,b)=gcd(a,-b)=gcd(-a,-b)
+
+lcm(a,b)=lcm(-a,b)=lcm(a,-b)=lcm(-a,-b)
+lcm(a,0)=lcm(0,a)=lcm(0,0)=not defined
