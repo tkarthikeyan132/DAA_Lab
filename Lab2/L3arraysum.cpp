@@ -24,7 +24,9 @@ int main()
 bool hashsum(int arr[],int n,int sum) 
 {
     int maxi=*max_element(arr,arr+n);
-    int brr[100000]/*[(2*maxi)+1]*/={0}; //brr[100000]={0}; it will solve but will create more space //brr[(2*maxi)+1]={0} it will result in  segmentation fault when number more than 2*maxi is searched
+    int mini=*min_element(arr,arr+n);
+    int amaxi=max(maxi,abs(mini));
+    int brr[100000]/*[(2*amaxi)+1]*/={0}; //brr[100000]={0}; it will solve but will create more space //brr[(2*maxi)+1]={0} it will result in  segmentation fault when number more than 2*maxi is searched
     for(int x=0;x<n;x++)
     {
         if(arr[x]<0)
