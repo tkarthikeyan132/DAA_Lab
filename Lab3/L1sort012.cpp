@@ -1,4 +1,4 @@
-#include<iostream> // sorting 0,1,2 in the array using bubble sort
+#include<iostream> // sorting 0,1,2 in the array using selection sort
 #include<bits/stdc++.h>
 using namespace std;
 int linse(int arr[],int beg,int end,int x);
