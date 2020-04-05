@@ -1,3 +1,4 @@
+#include<bits/stdc++.h>
 #include<iostream>
 #include<vector>
 #include<algorithm>
@@ -13,6 +14,29 @@ class Unit
         void initializer();
 };
 
+class Pair
+{
+    public:
+        int Array_id;
+        int value;
+        Pair(int id, int val) 
+        { 
+            Array_id = id; 
+            value = val; 
+        } 
+        int getARR() const { return Array_id; } 
+        int getVAL() const { return value; } 
+}; 
+  
+// To compare two Pairs 
+class myComparator 
+{ 
+    public: 
+        int operator() (const Pair& p1, const Pair& p2) 
+        { 
+            return p1.getVAL() > p2.getVAL(); 
+        } 
+}; 
 vector<int> Sorter(Unit Unit_Array[], int k, int Final_Array_Size);
 
 int main()
@@ -43,14 +67,12 @@ int main()
 vector<int> Sorter(Unit Unit_Array[], int k, int Final_Array_Size)
 {
     int j = 0;
-    vector<int> Temp(k);
     vector<int> Final_vector(Final_Array_Size);
+    priority_queue<Pair, vector<Pair>, myComparator> Heap;
     for(int i = 0; i < k; i++)
-        Temp[i] = (-1) * Unit_Array[i].arr[Unit_Array[i].pointer];
-    
-    make_heap(Temp.begin(), Temp.end());
-    Final_vector[j] = Temp.front();
-    Temp.pop_back(); 
+    {
+        Heap.push(Pair(i, Unit_Array[i].arr[Unit_Array[i].pointer]));
+    }     
 
 
 }
