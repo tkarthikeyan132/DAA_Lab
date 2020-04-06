@@ -74,6 +74,8 @@ int main()
             break;
         
         case 2:
+            for(int i=2;i<47;i++) // fibonacci number generation
+                fibs[i]=fibs[i-1]+fibs[i-2];
             m = fibmark(A);
             if(m==-1)
                 cout<<"-1 not found"<<endl;
