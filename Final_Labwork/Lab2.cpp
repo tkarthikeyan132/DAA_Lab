@@ -1,5 +1,6 @@
 #include "Lab2.h"
 
+int fibs[47];
 //Logic1
 bool bruteforcesum(int arr[],int n,int sum)
 {
