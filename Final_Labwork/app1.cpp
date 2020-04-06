@@ -48,5 +48,23 @@ int main()
             break;
     }
     
+ //------------------------------------------------------------------------------------------------------    
+    int size;
+    cout << "Enter the array size to calculate GCD: ";
+    cin >> size;
+    int arr[size];
+    cout << "Enter the array of integers: ";
+    for(int i = 0; i < size; i++)
+        cin >> arr[i];
+    cout << "Enter 1 for iterative implementation, for recursive enter 0: ";
+    cin >> it;
+    cout << "GCD is: ";
+    switch(it)
+    {
+        case 0:
+            cout << gcda_rec(arr, size) << endl;
+        case 1:
+            cout << gcda_it(arr, size) << endl;
+    }
     return 0;
 }
