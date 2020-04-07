@@ -8,7 +8,7 @@ double Sin(float x)
     double val = 0;
     for(int i = 0; i < 100; i++)
     {
-        val = val + ((power(-1, i) * power(x, 2*i + 1))/(fact(2*i + 1)));
+        val = val + ((Power(-1, i) * Power(x, 2*i + 1))/(Factorial(2*i + 1)));
     }
     return val;
 }
@@ -18,7 +18,7 @@ double Cos(float x)
     double val = 0;
     for(int i = 0; i < 100; i++)
     {
-        val = val + ((power(-1, i) * power(x, 2*i))/(fact(2*i)));
+        val = val + ((Power(-1, i) * Power(x, 2*i))/(Factorial(2*i)));
     }
     return val;
 }
@@ -33,7 +33,7 @@ float Std_deviation(float * arr, int size)
     mean = mean / size;
     for(int i = 0; i < size; i++)
     {
-        sum = sum + power(arr[i] - mean, 2);
+        sum = sum + Power(arr[i] - mean, 2);
     }
     sum = sum / size;
     sum = sqrt(sum);
@@ -43,7 +43,7 @@ float Std_deviation(float * arr, int size)
 
 double Poisson_pdf(int n, float parameter)
 {
-    return  (power(parameter, n) / (fact(n)*(power(2.71828, parameter))));
+    return  (Power(parameter, n) / (Factorial(n)*(Power(2.71828, parameter))));
 }
 
 double Random(int Max)
