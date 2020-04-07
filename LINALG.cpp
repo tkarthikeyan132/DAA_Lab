@@ -1,17 +1,15 @@
 #include"LINALG.h"
-#include<bits/stdc++.h>
-using namespace std;
+
 vector<vector<int>> Matrix_addition(vector<vector<int>> arr,int m,int n,vector<vector<int>> brr,int x,int y)
 {
-    vector<vector<int>> c;
+    vector<vector<int>> c(m);  //make vector (of vectors) of size m
     if( m == x && n == y )
     {
         for(int i = 0; i < m; i++)
         {
-            vector<int> temp;
+            c[i].resize(n);
             for(int j = 0; j < n; j++)
-                temp.push_back(arr[i][j]+brr[i][j]);
-            c.push_back(temp);
+                c[i][j] = arr[i][j]+brr[i][j];
         }
     }
     else
