@@ -1,16 +1,26 @@
 #include<iostream> //finding the minimum and maximum in an array in ((3n/2)-2) comparisons
 #include<bits/stdc++.h>
 using namespace std;
+vector<int> minmaxpair(int *arr,int n);
 int main()
 {
     int N;
-    int max,min;
     cout<<"Enter the size of array:";
     cin>>N;
     int arr[N];
     cout<<"Enter the elements:";
     for(int i=0;i<N;i++)
         cin>>arr[i];
+    vector<int> r(2);
+    r=minmaxpair(arr,N);
+    cout<<"Maximum element:"<<r[0]<<endl;
+    cout<<"Minimum element:"<<r[1]<<endl;
+    return 0;
+}
+vector<int> minmaxpair(int *arr,int N)
+{
+    int max,min;
+    vector<int> v;
     if(N%2) //odd-sized array
     {   
         max=arr[0];
@@ -67,7 +77,7 @@ int main()
                 min=mint;
         }   
     }
-    cout<<"Maximum element:"<<max<<endl;
-    cout<<"Minimum element:"<<min<<endl;
-    return 0;
+    v.push_back(min);
+    v.push_back(max);
+    return v;
 }
