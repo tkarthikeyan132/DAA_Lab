@@ -103,11 +103,9 @@ bool divide1(int n,int d)  //n.logn
 //_______________________________________________________________________________
 bool divide2(int n,int d)  //n.root(n)  //error
 {
-    char str[n+1]="";
-    /*char str[n+1];
-    str[n + 1] = "";*/
+    string str="";
     for(int i=0;i<n;i++)
-        str[i]='1';
+        str+='1';
     int count=0;
     for(int i=0;i<n;i++)
     {
