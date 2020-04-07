@@ -22,9 +22,9 @@ int main()
 }
 bool divide(int n,int d)
 {
-    char str[n+1]="";
+    string str="";
     for(int i=0;i<n;i++)
-        str[i]='1';
+        str+='1';
     int count=0;
     for(int i=0;i<n;i++)
     {
