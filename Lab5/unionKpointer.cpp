@@ -1,5 +1,7 @@
+
 #include<iostream> //merging k sorted arrays into a single sorted array using merge subroutine of merge sort(that is using k pointers)
 using namespace std;
+struct megalist union_of_array(struct listt L[],int N);
 struct listt
 {
     int arr[100];
@@ -15,10 +17,19 @@ struct megalist
 int main()
 {
     int N;
-    int flag=1;
     cout<<"Enter the number of arrays:";
     cin>>N;
     struct listt L[N];
+    struct megalist M;
+    M = union_of_array(L,N);
+    cout<<"Sorted array:";
+    for(int z=0;z<M.size;z++)
+        cout<<M.arr[z]<<" ";
+    return 0;
+}
+struct megalist union_of_array(struct listt L[],int N)
+{
+    int flag=1;
     int maxi; //positive infinity
     struct megalist M;
     M.ptr=0;
@@ -65,8 +76,6 @@ int main()
                 flag++;
         }
     }
-    cout<<"Sorted array:";
-    for(int z=0;z<M.size;z++)
-        cout<<M.arr[z]<<" ";
-    return 0;
+    return M;
 }
+    
