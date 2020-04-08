@@ -5,7 +5,7 @@ CFLAGS = -c -w
 
 
 
-all: app1 app2 app4 app5 app6
+all: app1 app2 app3 app4 app5 app6
 
 app1: app1.o					#apps can be used by entering ./app1 in the command line
 	$(CC) app1.o Lab1.o -o app1
