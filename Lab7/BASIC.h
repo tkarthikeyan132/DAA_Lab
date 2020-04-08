@@ -3,7 +3,7 @@ int Addition(int,int);
 int Subtraction(int,int);
 int Multiplication(int,int);
 int Division(int,int);
-int fact(int);
-double power(float x, int n)
+int Factorial(int);
+int Power(int,int);
 
     

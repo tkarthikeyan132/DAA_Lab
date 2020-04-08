@@ -31,22 +31,18 @@ int Division(int a,int b)
     t=a/b;
     return t;
 }
-
-int fact(int f)
+int Factorial(int f)
 {
     if(f==1||f==0)
         return 1;
     else
-        return (f * fact(f-1));
+        return f*Factorial(f-1);
 }
-
-double power(float x, int n)
+int Power(int a,int b)
 {
-    if(n == 0)
+    if(b==0)
         return 1;
-    else if(n > 0)
-        return (x * power(x, n - 1));
     else
-        return (1 / power(x, n));
+        return a*Power(a,b-1);
 }
     
